@@ -16,7 +16,7 @@
 ///   File: version.hpp
 ///
 /// Author: $author$
-///   Date: 1/27/2022
+///   Date: 3/31/2022
 ///////////////////////////////////////////////////////////////////////
 #if !defined(XOS_LIB_USTARA_VERSION_HPP)
 #define XOS_LIB_USTARA_VERSION_HPP

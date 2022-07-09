@@ -79,9 +79,14 @@ protected:
     typedef typename extends::err_writer_t err_writer_t;
 
     typedef typename extends::headers_t headers_t;
+    typedef typename extends::content_encoding_header_t content_encoding_header_t;
     typedef typename extends::content_type_header_t content_type_header_t;
     typedef typename extends::content_length_header_t content_length_header_t;
+
     typedef typename extends::content_t content_t;
+    typedef typename extends::text_content_type_t text_content_type_t;
+    typedef typename extends::json_content_type_t json_content_type_t;
+    typedef typename extends::text_content_t text_content_t;
 
     typedef xos::protocol::http::request::method::name request_method_t;
     typedef xos::protocol::http::request::resource::identifier request_resource_t;
@@ -125,6 +130,18 @@ protected:
         if ((chars = resource.has_chars(length))) {
             this->outln(chars, length);
         }
+        return err;
+    }
+
+    /// ...set_content_encoding
+    virtual int after_set_content_encoding(const char_t* content_encoding, int argc, char_t** argv, char** env) {
+        content_encoding_header_t& content_encoding_header = this->content_encoding_header();
+        content_type_header_t& content_type_header = this->content_type_header();
+        content_length_header_t& content_length_header = this->content_length_header();
+        headers_t& request_headers = this->request_headers();
+        int err = 0;
+        request_headers.is_setl(&content_encoding_header, &content_type_header, &content_length_header, null);
+        err = all_set_request_headers(request_headers, argc, argv, env);
         return err;
     }
 

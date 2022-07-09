@@ -126,10 +126,10 @@ protected:
         if ((rs.read_with_content(count, c, reader))) {
             const char_t* chars = 0; size_t length = 0;
             if ((chars = rs.has_chars(length)) && (!chars[length])) {
-                this->errlln(__LOCATION__, "...response = \"", chars, "\"", null);
+                LOGGER_IS_LOGGED_INFO("...response = \"" << chars << "\"");
             }
             if ((chars = rs.content_chars(length)) && (!chars[length])) {
-                this->errlln(__LOCATION__, "...content = \"", chars, "\"", null);
+                LOGGER_IS_LOGGED_INFO("...content = \"" << chars << "\"");
             }
             err = all_process_response(rs, reader, argc, argv, env);
         }
