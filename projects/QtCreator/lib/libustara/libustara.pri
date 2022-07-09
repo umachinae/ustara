@@ -16,14 +16,14 @@
 #   File: libustara.pri
 #
 # Author: $author$
-#   Date: 1/27/2022
+#   Date: 3/31/2022, 5/9/2022
 #
 # generic QtCreator project .pri file for framework ustara static library libustara
 ########################################################################
 
 ########################################################################
 # libustara
-XOS_LIB_USTARA_VERSION_BUILD_DATE = 1/27/2022 #$$system(~/bin/utility/tdate)
+XOS_LIB_USTARA_VERSION_BUILD_DATE = 5/9/2022 #$$system(~/bin/utility/tdate)
 
 # libustara TARGET
 #
@@ -66,4 +66,3 @@ libustara_SOURCES += \
 $${USTARA_SRC}/xos/lib/ustara/version.cpp \
 
 ########################################################################
-

@@ -16,7 +16,7 @@
 #   File: ustara.pri
 #
 # Author: $author$
-#   Date: 1/27/2022
+#   Date: 3/31/2022, 5/9/2022
 #
 # generic QtCreator project .pri file for framework ustara executable ustara
 ########################################################################
@@ -55,12 +55,14 @@ XOS_CONSOLE_MAIN_MAIN \
 # ustara_exe HEADERS
 #
 ustara_exe_HEADERS += \
-$${USTARA_SRC}/xos/app/console/ustara/main.hpp \
+$${USTARA_SRC}/xos/app/console/ustara/version/main_opt.hpp \
+$${USTARA_SRC}/xos/app/console/ustara/version/main.hpp \
 
 # ustara_exe SOURCES
 #
 ustara_exe_SOURCES += \
-$${USTARA_SRC}/xos/app/console/ustara/main.cpp \
+$${USTARA_SRC}/xos/app/console/ustara/version/main_opt.cpp \
+$${USTARA_SRC}/xos/app/console/ustara/version/main.cpp \
 
 ########################################################################
 # ustara_exe FRAMEWORKS

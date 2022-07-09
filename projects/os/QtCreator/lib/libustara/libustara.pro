@@ -16,7 +16,7 @@
 #   File: libustara.pro
 #
 # Author: $author$
-#   Date: 1/27/2022
+#   Date: 3/31/2022
 #
 # os specific QtCreator project .pro file for framework ustara static library libustara
 ########################################################################
